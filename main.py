@@ -4,13 +4,13 @@ import sys
 from spider_search import SpiderSearch
 
 # добавляем вложенность рекурсии
-sys.setrecursionlimit(1300)
+sys.setrecursionlimit(100000)
 
 # инициализация
 parser = argparse.ArgumentParser(description="Spider search")
-parser.add_argument('--url', action="store", default="https://krasnoyarsk.pizzapertsy.ru",
+parser.add_argument('--url', action="store", default="http://lordsfilms.tv",
                     help="Для примера https://krasnoyarsk.pizzapertsy.ru")
-parser.add_argument('--exclude', action="store", default="\.jpg|\.png|\.docx|\.docx|\.pdf|\.pdf|\.gif|\.html",
+parser.add_argument('--exclude', action="store", default="\.jpg|\.png|\.docx|\.docx|\.pdf|\.pdf|\.gif",
                     help="\.jpg|\.png")
 parser.add_argument('--output', action="store", default="files/sitemap.xml")
 
